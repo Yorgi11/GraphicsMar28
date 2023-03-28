@@ -85,17 +85,14 @@ The LOD value is set to 200, which determines the shader's level of detail.
 
 The shader program is declared with a #pragma directive that defines a surface shader named surf and uses the custom lighting model LightingCSLambert.
 The _MainTex, _Color, and _ShadowColor properties are declared as sampler2D and fixed4 data types.
-The Input struct is defined, which contains the texture coordinates (UV) for the _MainTex.
-LightingCSLambert function:
+The Input struct is defined, which contains the texture coordinates for the _MainTex.
 
-This function is the custom lighting model that calculates the lighting and shadow colors based on the Lambertian reflectance model.
+The LightingCSLambert function is the custom lighting model that calculates the lighting and shadow colors based on the Lambert model.
 The diffuse lighting is calculated using the dot product of the surface normal and the light direction.
-The shadow color is calculated using the attenuation (light falloff) value, which determines the intensity of the shadows.
-surf function:
+The shadow color is calculated using the attenuation value, which determines the intensity of the shadows.
 
 The surf function takes the input texture coordinates and calculates the final albedo and alpha values for the material.
 The albedo color is obtained by multiplying the _MainTex and _Color properties.
 The alpha value is taken directly from the input texture.
-Fallback:
 
-If the shader is not supported on the target platform, the shader will fall back to the built-in "Diffuse" shader.
+Finally if the shader is not supported on the target platform, the shader will fall back to the built-in "Diffuse" shader.
