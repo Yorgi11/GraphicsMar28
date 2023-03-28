@@ -30,7 +30,7 @@ The key difference is that deferred rendering separates geometry rendering and s
 Task 3:
 Create a toon shaded square-shapedwave.
 <img width="551" alt="Screenshot 2023-03-28 121626" src="https://user-images.githubusercontent.com/94036650/228308739-b3b4de35-0840-4cb5-beea-ee9899e7d398.png">
-<img width="761" alt="Screenshot 2023-03-28 123631" src="https://user-images.githubusercontent.com/94036650/228308753-de922308-9300-4098-9ce0-57e50c31677b.png">
+<img width="620" alt="Screenshot 2023-03-28 160731" src="https://user-images.githubusercontent.com/94036650/228356140-d96dbbc9-2020-44d3-a0a9-67e48d4f0e58.png">
 
 The toon shader is separated into two main parts;
 the surface shader for the toon shading effect and the outline pass for creating the outline.
@@ -69,7 +69,7 @@ Finally, blit the currentSource texture onto the destination texture
 Task 5:
 No change from the screen shots in Task 3. Toon shader already has outlines implemented. Wave shader already does vertex extrusion
 <img width="551" alt="Screenshot 2023-03-28 121626" src="https://user-images.githubusercontent.com/94036650/228308790-526e41de-9613-4d4d-a6be-e89925d7ad93.png">
-<img width="761" alt="Screenshot 2023-03-28 123631" src="https://user-images.githubusercontent.com/94036650/228308802-177d0b4b-b562-40a1-8ef5-6b12790264f3.png">
+<img width="620" alt="Screenshot 2023-03-28 160731" src="https://user-images.githubusercontent.com/94036650/228356087-0af9d145-87e9-4bcb-9e7b-0715df049d97.png">
 
 Task 6:
 Explain the code snipet:
