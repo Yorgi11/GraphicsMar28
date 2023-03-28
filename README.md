@@ -28,7 +28,7 @@ Blend the light's shaded result with the framebuffer.
 The key difference is that deferred rendering separates geometry rendering and shading calculations into two separate passes, which can improve performance for scenes with many lights.
 
 Task 3:
-build for this taks located at Build/Build1
+build for this task located at Build/Build1
 Create a toon shaded square-shapedwave.
 <img width="551" alt="Screenshot 2023-03-28 121626" src="https://user-images.githubusercontent.com/94036650/228308739-b3b4de35-0840-4cb5-beea-ee9899e7d398.png">
 <img width="620" alt="Screenshot 2023-03-28 160731" src="https://user-images.githubusercontent.com/94036650/228356140-d96dbbc9-2020-44d3-a0a9-67e48d4f0e58.png">
@@ -100,7 +100,7 @@ Finally if the shader is not supported on the target platform, the shader will f
 
 
 Task 7:
-build for this taks located at Build/Build2
+build for this task located at Build/Build2
 Glass shader:
 The shader simulates the appearance of glass by combining refraction, normal mapping, and a texture to tint the final result.
 
