@@ -96,3 +96,26 @@ The albedo color is obtained by multiplying the _MainTex and _Color properties.
 The alpha value is taken directly from the input texture.
 
 Finally if the shader is not supported on the target platform, the shader will fall back to the built-in "Diffuse" shader.
+
+
+Task 7:
+Glass shader:
+The shader simulates the appearance of glass by combining refraction, normal mapping, and a texture to tint the final result.
+
+Fist we define the Properties:
+_MainTex: The main texture that tints the final output color.
+_BumpMap: The normal map texture that simulates surface details and affects the refraction.
+_ScaleUV: A scalar value that controls the intensity of the refraction effect.
+
+GrabPass: The GrabPass captures the current screen content into a temporary texture called _GrabTexture. This texture is used later in the shader to create the refraction effect.
+
+The shader has a single pass, containing two functions - the vertex shader (vert) and the fragment shader (frag).
+
+Vertex shader (vert): The vertex shader takes the input vertex data (appdata) and transforms it into clip space using UnityObjectToClipPos. It then calculates UV coordinates for the _GrabTexture, taking into account if Unity uses UV coordinates starting from the top-left or bottom-left corner. It also calculates the UV coordinates for both the _MainTex and the _BumpMap.
+
+Fragment shader (frag): The fragment shader is responsible for the final output color of each pixel. It first unpacks the normal value from the _BumpMap and calculates an offset value for the _GrabTexture UVs based on the normal value and the _ScaleUV property. The offset is then applied to the _GrabTexture UVs to create the refraction effect. The refraction is combined with the main texture (_MainTex) to tint the final output color.
+
+Diagram
+![Screenshot 2023-03-28 165955](https://user-images.githubusercontent.com/94036650/228365647-ab0d6a71-5126-4810-b485-c7a6c58ed569.png)
+
+This shader can be used to create a stained glass look and/or to add a level of depth to any semi transparent effects, like adding ui and having the Ui have various levels of transparency based on the texture you provide the shader
